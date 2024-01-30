@@ -48,7 +48,11 @@ function PricingCard({
             <span className='text-3xl'> $ </span> {annuallyPrice}
           </p>
         ) : (
-          <p className='flex items-center gap-2'>
+          <p
+            className={cn('flex items-center gap-2', {
+              'text-white': name === 'Professional',
+            })}
+          >
             <span className='text-3xl'> $ </span> {monthlyPrice}
           </p>
         )}
